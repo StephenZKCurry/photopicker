@@ -17,6 +17,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    allprojects {
+        repositories {
+            jcenter()
+            maven { url "https://jitpack.io" }
+        }
+    }
 }
 
 dependencies {
@@ -26,4 +32,9 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:24.2.1'
     testCompile 'junit:junit:4.12'
+
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.android.support:recyclerview-v7:24.2.1'
+    compile 'com.github.chrisbanes:PhotoView:1.2.6'
+    compile 'com.github.lovetuzitong:MultiImageSelector:1.2'
 }
